@@ -1,5 +1,5 @@
 /*
-  @file ML042_Figma_Lib_potentiometer_demo.ino
+  @file ML042_Figma_Lib_Potentiometer_demo.ino
 
   ----------------------------------------------------------------------------------
   Created by Marco Lurati, November 18, 2023
