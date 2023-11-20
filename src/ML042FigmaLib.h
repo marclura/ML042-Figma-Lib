@@ -1,5 +1,5 @@
 /*
-  @file ML042_Figma_Lib.h
+  @file ML042FigmaLib.h
 
   ----------------------------------------------------------------------------------
   Created by Marco Lurati, November 18, 2023
@@ -28,8 +28,8 @@
 
 */
 
-#ifndef ML042_Figma_Lib_h
-#define ML042_Figma_Lib_h
+#ifndef ML042FigmaLib_h
+#define ML042FigmaLib_h
 
 #include <Arduino.h>
 
@@ -247,9 +247,9 @@ class FigmaEncoder {
         uint8_t pinA;
         uint8_t pinB;
         uint8_t clicks_per_turn;
-        uint16_t angle;
+        uint16_t angle_encoder;
         uint16_t old_angle;
-        void init();
+        char key_encoder;
 
         /*!
         * Initialise the encoder

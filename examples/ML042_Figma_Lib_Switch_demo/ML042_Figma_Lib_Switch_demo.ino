@@ -28,7 +28,7 @@
 
 */
 
-#include <ML042_Figma_Lib.h>
+#include <ML042FigmaLib.h>
 
 // Important! Don't use "switch" as a variable name, because it is already reserved as switch() function
 FigmaSwitch rocket_switch(2, 'L', 'R');  // pin, key position 1, key position 2

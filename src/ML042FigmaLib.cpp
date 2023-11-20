@@ -1,5 +1,5 @@
 /*
-  @file ML042_Figma_Lib.cpp
+  @file ML042FigmaLib.cpp
 
   Created by Marco Lurati, November 18, 2023
   
@@ -28,7 +28,7 @@
 */
 
 #include <Arduino.h>
-#include "ML042_Figma_Lib.h"
+#include "ML042FigmaLib.h"
 
 /*!
  * FigmaButton class
@@ -196,7 +196,7 @@ void FigmaEncoder::update() {
 }
 
 uint16_t FigmaEncoder::angle() {
-  return angle;
+  return angle_encoder;
 }
 
 bool FigmaEncoder::angleChanged() {
@@ -204,11 +204,11 @@ bool FigmaEncoder::angleChanged() {
 }
 
 void FigmaEncoder::addPosition(uint16_t _angle, char _key) {
-
+  
 }
 
 char FigmaEncoder::key() {
-  return key;
+  return key_encoder;
 }
 
 

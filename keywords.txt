@@ -1,7 +1,7 @@
 # Syntax Coloring Map For ML042Figma
 
 # Datatypes (KEYWORD1)
-ML042_Figma_Lib	KEYWORD1
+ML042FigmaLib	KEYWORD1
 
 # Methods and Functions (KEYWORD2)
 begin	KEYWORD2
