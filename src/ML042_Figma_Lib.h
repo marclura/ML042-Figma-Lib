@@ -200,11 +200,64 @@ class FigmaEncoder {
         */
         FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn);  // constructor
     
+
+        /*!
+        * Return true if a click to the right occourred
+        * @method
+        */
+        bool clickRight();
+
+        /*!
+        * Return true if a click to the left occourred
+        * @method
+        */
+        bool clickLeft();
+
+        /*!
+        * Return the current angle
+        * @method
+        */
+        uint16_t angle();
+
+        /*!
+        * Return true if the angle has changed
+        * @method
+        */
+        bool angleChanged();
+
+        /*!
+        * Add a position with a key
+        * @method
+        */
+        void addPosition(uint16_t _angle, char _key);
+
+        /*!
+        * Return the current key
+        * @method
+        */
+        char key();
+
+        /*!
+        * Update the encoder values
+        * @method
+        */
+        void update();
+
     protected:
         uint8_t pinA;
         uint8_t pinB;
         uint8_t clicks_per_turn;
+        uint16_t angle;
+        uint16_t old_angle;
         void init();
+
+        /*!
+        * Initialise the encoder
+        * @method
+        */
+        void init();
+
+
 };
 
 /*!
