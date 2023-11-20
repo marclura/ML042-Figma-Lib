@@ -118,17 +118,65 @@ class FigmaPot {
         * @class
         * @param {number} _pin - connection pin
         */
-        FigmaPot(uint8_t _pin);  // constructor
+        FigmaPot(uint8_t _pin, uint8_t _positions, uint16_t _spread);  // constructor
 
         /*!
-        * Read and return the value
+        * Read and return the current value
         * @method
+        * @return {number} current potentiometer value
         */
-        uint16_t read();
-        
+        uint16_t value();
+
+        /*!
+        * Add a new position to the potentiometer
+        * @method
+        * @param {number} _position - position number, counted from left to right
+        * @param {number} _value - potentimmeter value of the new position
+        * @param {char} _key - corresponding key of the new position
+        */
+        void addPosition(uint8_t _position, uint16_t _value, char _key);
+
+        /*!
+        * Check if the position has changed or not
+        * @method
+        * @return {boolean} true: if the position has change, false: if didn't
+        */
+        bool positionChanged();
+
+        /*!
+        * Return the corresponding key for that position
+        * @method
+        * @return {char} key of the current position
+        */
+        char key();
+
     protected:
         uint8_t pin;
         uint16_t value;
+        uint16_t spread;
+        uint8_t positions;
+        uint16_t positions_values[10];
+        char positions_keys[10];
+        uint8_t current_position;
+        uint8_t old_position;
+        bool position_changed;
+
+        /*!
+        * Update the values and status of the potentiometer
+        * @method
+        */
+        void update();
+
+        /*!
+        * Read the current value of the potentiometer
+        * @method
+        */
+        void read();
+
+        /*!
+        * Initialise the potentiometer pin
+        * @method
+        */
         void init();
 };
 

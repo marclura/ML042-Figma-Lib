@@ -109,19 +109,62 @@ void FigmaButton::init() {
 
 /* Constructor */
 
-FigmaPot::FigmaPot(uint8_t _pin) {
+FigmaPot::FigmaPot(uint8_t _pin, uint8_t _positions, uint16_t _spread) {
   pin = _pin;
+  positions = _positions;
+  spread = _spread;
   init();
 }
 
 /* Public methods */
-
-uint16_t FigmaPot::read() {
-  value = analogRead(pin);
+uint16_t FigmaPot::value() {
+  read();
   return value;
 }
 
+void FigmaPot::addPosition(uint8_t _position, uint16_t _value, char _key) {
+  positions_values[_position - 1] = _value;
+  position_keys[_position - 1] = _key;
+  update();
+}
+
+bool FigmaPot::positionChanged() {
+  update();
+  return position_changed;
+}
+
+char FigmaPot::key() {
+  return position_keys[current_position];
+}
+
+
 /* Private methods */
+void FigmaPot::update() {
+  bool position_found = false;
+  read();
+  for(uint8_t i=0; i<positions; i++) {  // check if the potentiometer is on a defined position or not
+    if(value < (positions_values[i] + _spread) && value > (positions_values[i] - _spread)) {
+      current_position = i;
+      position_found = true;
+      break;
+    }
+  }
+
+  if(position_found) {  // if the pot is on a defined position
+    if(old_position != current_position) {  // new position detected
+      position_changed = true;
+      old_position = current_position;
+    }
+    else {
+      position_changed = false;
+    }
+  }
+
+}
+
+void FigmaPot::read() {
+  value = analogRead(pin);
+}
 
 void FigmaPot::init() {
   pinMode(pin, INPUT);
