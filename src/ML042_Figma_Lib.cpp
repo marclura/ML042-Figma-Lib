@@ -38,7 +38,7 @@
 
 FigmaButton::FigmaButton(uint8_t _pin, char _key) {
   pin = _pin;
-  key = _key;
+  key_item = _key;
   value = false;
   old_value = false;
   status = 0; // 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
@@ -48,37 +48,32 @@ FigmaButton::FigmaButton(uint8_t _pin, char _key) {
 /* Public methods */
 bool FigmaButton::off() {
   bool condition = false;
-  update();
   if(status == 0) condition = true;
   return condition;
 }
 
 bool FigmaButton::pressed() {
   bool condition = false;
-  update();
   if(status == 1) condition = true;
   return condition;
 }
 
 bool FigmaButton::on() {
   bool condition = false;
-  update();
   if(status == 2) condition = true;
   return condition;
 }
 
 bool FigmaButton::released() {
   bool condition = false;
-  update();
   if(status == 3) condition = true;
   return condition;
 }
 
 char FigmaButton::key() {
-  return key;
+  return key_item;
 }
 
-/* Private methods */
 void FigmaButton::update() {
   read();
   if(!old_value && !value) status = 0;  // off
@@ -92,6 +87,8 @@ void FigmaButton::update() {
     old_value = false;
   }
 }
+
+/* Private methods */
 
 void FigmaButton::read() {
   value = digitalRead(pin);
@@ -116,15 +113,20 @@ FigmaPot::FigmaPot(uint8_t _pin, uint8_t _positions, uint16_t _spread) {
   init();
 }
 
+FigmaPot::FigmaPot(uint8_t _pin) {
+  pin = _pin;
+  init();
+}
+
 /* Public methods */
-uint16_t FigmaPot::value() {
+uint16_t FigmaPot::getValue() {
   read();
   return value;
 }
 
 void FigmaPot::addPosition(uint8_t _position, uint16_t _value, char _key) {
   positions_values[_position - 1] = _value;
-  position_keys[_position - 1] = _key;
+  positions_keys[_position - 1] = _key;
   update();
 }
 
@@ -134,32 +136,25 @@ bool FigmaPot::positionChanged() {
 }
 
 char FigmaPot::key() {
-  return position_keys[current_position];
+  return positions_keys[current_position];
 }
 
 
 /* Private methods */
 void FigmaPot::update() {
   bool position_found = false;
+  position_changed = false;
   read();
   for(uint8_t i=0; i<positions; i++) {  // check if the potentiometer is on a defined position or not
-    if(value < (positions_values[i] + _spread) && value > (positions_values[i] - _spread)) {
+    if(value < (positions_values[i] + spread) && value > (positions_values[i] - spread)) {
       current_position = i;
-      position_found = true;
+      if(old_position != current_position) {  // new position detected
+        position_changed = true;
+        old_position = current_position;
+      }
       break;
     }
   }
-
-  if(position_found) {  // if the pot is on a defined position
-    if(old_position != current_position) {  // new position detected
-      position_changed = true;
-      old_position = current_position;
-    }
-    else {
-      position_changed = false;
-    }
-  }
-
 }
 
 void FigmaPot::read() {
@@ -167,9 +162,9 @@ void FigmaPot::read() {
 }
 
 void FigmaPot::init() {
+  old_position = 255; // init old value out of the possible range
   pinMode(pin, INPUT);
 }
-
 
 
 
@@ -179,9 +174,10 @@ void FigmaPot::init() {
 
 /* Constructor */
 
-FigmaEncoder::FigmaEncoder(uint8_t _pinA, uint8_t _pinB) {
+FigmaEncoder::FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn) {
   pinA = _pinA;
   pinB = _pinB;
+  clicks_per_turn = _clicks_per_turn;
   init();
 }
 
@@ -214,7 +210,6 @@ FigmaSwitch::FigmaSwitch(uint8_t _pin, char _key0, char _key1) {
 
 /* Public methods */
 bool FigmaSwitch::position() {
-  read();
   return value;
 }
 
@@ -226,11 +221,10 @@ char FigmaSwitch::key() {
 }
 
 bool FigmaSwitch::changed() {
-  update();
   return changed_flag;
 }
 
-/* Private methods */
+
 void FigmaSwitch::update() {
   read();
   if(old_value != value) {
@@ -240,6 +234,7 @@ void FigmaSwitch::update() {
   else changed_flag = false;
 }
 
+/* Private methods */
 void FigmaSwitch::read() {
   value = digitalRead(pin);
 }
@@ -267,7 +262,7 @@ FigmaLed::FigmaLed(uint8_t _pin) {
 
 /* Public methods */
 
-void FigmaLed::value(uint8_t _value) {
+void FigmaLed::set(uint8_t _value) {
   value = _value;
   update();
 }
@@ -282,8 +277,9 @@ void FigmaLed::off() {
   update();
 }
 
-void FigmaLed::blink(uint16_t _time) {
-  time = _time;
+void FigmaLed::toggle() {
+  value = !value;
+  update();
 }
 
 /* Private methods */
@@ -304,16 +300,17 @@ void FigmaLed::update() {
 
 /* Constructor */
 
-FigmaLedPWM::FigmaLedPWM(uint8_t _pin, uint8_t _value = 0) {
+FigmaLedPWM::FigmaLedPWM(uint8_t _pin, uint8_t _value, bool _on_at_startup) {
   pin = _pin;
   value = _value;
   old_value = 0;
+  on_at_startup = _on_at_startup;
   init();
 }
 
 /* Public methods */
 
-void FigmaLedPWM::value(uint8_t _value) {
+void FigmaLedPWM::on(uint8_t _value) {
   old_value = value;
   value = _value;
   update();
@@ -334,7 +331,9 @@ void FigmaLedPWM::off() {
 
 void FigmaLedPWM::init() {
   pinMode(pin, OUTPUT);
-  analogWrite(pin, value);
+  if(on_at_startup) {
+    analogWrite(pin, value);
+  }
 }
 
 void FigmaLedPWM::update() {

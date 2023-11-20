@@ -81,18 +81,19 @@ class FigmaButton {
         */
         char key();
 
-    protected:
-        uint8_t pin;
-        char key;
-        bool value;
-        bool old_value;
-        uint8_t status; // 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
-
         /*!
         * Update the status of the button, 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
         * @method
         */
         void update();
+
+
+    protected:
+        uint8_t pin;
+        char key_item;
+        bool value;
+        bool old_value;
+        uint8_t status; // 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
 
         /*!
         * Read the button pin
@@ -114,18 +115,25 @@ class FigmaButton {
 class FigmaPot {
     public:
         /*!
-        * FigmaPot Datatype declaration Class Constructor
+        * FigmaPot Datatype declaration Class Constructor 1
         * @class
         * @param {number} _pin - connection pin
         */
-        FigmaPot(uint8_t _pin, uint8_t _positions, uint16_t _spread);  // constructor
+        FigmaPot(uint8_t _pin, uint8_t _positions, uint16_t _spread);  // constructor 1
+
+        /*!
+        * FigmaPot Datatype declaration Class Constructor 2
+        * @class
+        * @param {number} _pin - connection pin
+        */
+        FigmaPot(uint8_t _pin); // constructor 2
 
         /*!
         * Read and return the current value
         * @method
         * @return {number} current potentiometer value
         */
-        uint16_t value();
+        uint16_t getValue();
 
         /*!
         * Add a new position to the potentiometer
@@ -190,11 +198,12 @@ class FigmaEncoder {
         * @class
         * @param {number} _pin - connection pin
         */
-        FigmaEncoder(uint8_t _pinA, uint8_t _pinB);  // constructor
+        FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn);  // constructor
     
     protected:
         uint8_t pinA;
         uint8_t pinB;
+        uint8_t clicks_per_turn;
         void init();
 };
 
@@ -230,6 +239,12 @@ class FigmaSwitch {
         * @return {char} current key according to the current position
         */
         char key();
+
+        /*!
+        * Update the switch status
+        * @method
+        */
+        void update();
     
     protected:
         uint8_t pin;
@@ -238,12 +253,6 @@ class FigmaSwitch {
         bool value;
         bool old_value;
         bool changed_flag;
-
-        /*!
-        * Update the switch status
-        * @method
-        */
-        void update();
 
         /*!
         * Read the current switch value, 0 or 1
@@ -275,7 +284,7 @@ class FigmaLed {
         * @method
         * @param {number} value - 0 to 255, for digital 0 or 1, for analog 0 to 255
         */
-        void value(uint8_t _value);
+        void set(uint8_t _value);
 
         /*!
         * Switch on the LED
@@ -290,10 +299,10 @@ class FigmaLed {
         void off();
 
         /*!
-        * Switch off the LED
+        * Invert the LED status 
         * @method
         */
-        void blink(uint16_t _time);
+        void toggle();
     
     protected:
         uint8_t pin;
@@ -313,20 +322,20 @@ class FigmaLedPWM {
         * @class
         * @param {number} _pin - connection pin
         */
-        FigmaLedPWM(uint8_t _pin, uint8_t _value);  // constructor
+        FigmaLedPWM(uint8_t _pin, uint8_t _value, bool _on_at_startup);  // constructor
 
         /*!
-        * Change the current LED value, works both for analog and digital pins
-        * @method
-        * @param {number} value - 0 to 255, for digital 0 or 1, for analog 0 to 255
-        */
-        void value(uint8_t _value);
-
-        /*!
-        * Switch on the LED
+        * Switch on the LED to the previous on value
         * @method
         */
         void on();
+
+        /*!
+        * Switch on the LED with a new value
+        * @method
+        * @param {number} value - 0 to 255
+        */
+        void on(uint8_t _value);
 
         /*!
         * Switch off the LED
@@ -339,6 +348,7 @@ class FigmaLedPWM {
         uint8_t pin;
         uint8_t value;
         uint8_t old_value;
+        bool on_at_startup;
         void init();
         void update();
 };
