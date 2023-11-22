@@ -57,7 +57,7 @@ void loop() {
 
   // Mapped potentiometer
   Serial.println("Mapped pot value: " + String(pot_mapped.getValue()));
-  if(pot_mapped.positionChanged()) {
+  if(pot_mapped.changed()) {
     Serial.print("-> New position: ");
     pot_mapped_last_position = pot_mapped.key();
     Serial.println(pot_mapped_last_position);

@@ -149,7 +149,7 @@ class FigmaPot {
         * @method
         * @return {boolean} true: if the position has change, false: if didn't
         */
-        bool positionChanged();
+        bool changed();
 
         /*!
         * Return the corresponding key for that position

@@ -130,7 +130,7 @@ void FigmaPot::addPosition(uint8_t _position, uint16_t _value, char _key) {
   update();
 }
 
-bool FigmaPot::positionChanged() {
+bool FigmaPot::changed() {
   update();
   return position_changed;
 }
