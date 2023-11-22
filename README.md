@@ -4,7 +4,7 @@ Library to control a Figma project using the ML042 board.
 
 ## ML042 pinout
 
-(doc/ML042_20221031_back.png "ML042 pinout")
+(https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042_20221031_back.png "ML042 pinout")
 
 - G2: D/A
 - G4: D/A
