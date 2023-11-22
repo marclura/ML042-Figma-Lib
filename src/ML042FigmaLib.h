@@ -188,6 +188,66 @@ class FigmaPot {
         void init();
 };
 
+
+/*!
+ * FigmaLightSensor
+ */
+class FigmaLightSensor {
+    public:
+        /*!
+        * FigmaLightSensor Datatype declaration Class Constructor
+        * @class
+        * @param {number} _pin - connection pin
+        */
+        FigmaLightSensor(uint8_t _pin);  // constructor
+
+        /*!
+        * Add a trigger to the light sensor
+        * @method
+        * @param {number} _threshold - activate the trigger below the value
+        * @param {char} _key - corresponding key of the new position
+        */
+        void triggerThreshold(uint16_t _threshold, uint16_t _spread, char _keyAbove, char _keyBelow);
+
+        /*!
+        * Update the light sensor value
+        * @method
+        */
+        void update();
+
+        /*!
+        * Return the corresponding key for that position
+        * @method
+        * @return {bool} true if the position has changed
+        */
+        bool changed();
+
+        /*!
+        * Return the corresponding key for that position
+        * @method
+        * @return {char} key of the current position
+        */
+        char key();
+
+    protected:
+        uint8_t pin;
+        uint16_t value;
+        uint16_t spread;
+        uint16_t threshold;
+        char keyAbove;
+        char keyBelow;
+        char current_key;
+        char old_key;
+
+        /*!
+        * Initialise the light sensor
+        * @method
+        */
+        void init();
+
+};
+
+
 /*!
  * FigmaEncoder class
  */

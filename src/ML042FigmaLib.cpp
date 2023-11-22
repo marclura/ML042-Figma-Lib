@@ -169,6 +169,56 @@ void FigmaPot::init() {
 
 
 /*!
+ * FigmaLightSensor class
+ */
+
+/* Constructor */
+
+FigmaLightSensor::FigmaLightSensor(uint8_t _pin) {
+  pin = _pin;
+  init();
+  update();
+}
+
+/* Public methods */
+
+void FigmaLightSensor::triggerThreshold(uint16_t _threshold, uint16_t _spread, char _keyAbove, char _keyBelow) {
+  threshold = _threshold;
+  spread = _spread;
+  keyAbove = _keyAbove;
+  keyBelow = _keyBelow;
+  old_key = '_';
+  current_key = '_';
+}
+
+void FigmaLightSensor::update() {
+  value = analogRead(pin);
+  if(value > (threshold + spread)) current_key = keyAbove;
+  else if (value < (threshold - spread)) current_key = keyBelow;
+}
+
+bool FigmaLightSensor::changed() {
+  bool changed = false;
+  if(old_key != current_key) {
+    changed = true;
+    old_key = current_key;
+  }
+  return changed;
+}
+
+char FigmaLightSensor::key() {
+  return current_key;
+}
+
+/* Private methods */
+
+void FigmaLightSensor::init() {
+  pinMode(pin, INPUT);
+}
+
+
+
+/*!
  * FigmaEncoder class
  */
 
