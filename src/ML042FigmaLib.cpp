@@ -1,23 +1,23 @@
-/**
- * @file ML042FigmaLib.cpp
- * 
- * @mainpage ML042 Figma Library
- * 
- * @section intro_sec Introduction
- * 
- * Library to use the PCB board ML042 as an HID interface (bluetooth or USB) to control a Figma project with key strokes
- * 
- * @section author Author
- * 
- * Written by Marco Lurati, November 18, 2023
- * 
- * @section license License
- * 
- * MIT License
- * 
- * Copyright (c) 2023 marclura
- * 
- * Permission is hereby granted, free of charge, to any person obtaining a copy
+/*!
+  @file ML042FigmaLib.cpp
+  
+  @mainpage ML042 Figma Library
+  
+  @section intro_sec Introduction
+  
+  Library to use the PCB board ML042 as an HID interface (bluetooth or USB) to control a Figma project with key strokes
+  
+  @section author Author
+  
+  Written by Marco Lurati, November 18, 2023
+  
+  @section license License
+  
+  MIT License
+  
+  Copyright (c) 2023 marclura
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
   in the Software without restriction, including without limitation the rights
   to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
