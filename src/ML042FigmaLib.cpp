@@ -56,8 +56,6 @@ FigmaButton::FigmaButton(uint8_t _pin, char _key) {
   init();
 }
 
-/* Public methods */
-
 /**
   * Check if the button is not pressed
   * 
@@ -130,8 +128,6 @@ void FigmaButton::update() {
   }
 }
 
-/* Private methods */
-
 /**
  * Read the pin status
  */
@@ -145,8 +141,6 @@ void FigmaButton::read() {
 void FigmaButton::init() {
   pinMode(pin, INPUT);
 }
-
-
 
 
 /**
@@ -173,8 +167,6 @@ FigmaPot::FigmaPot(uint8_t _pin) {
   pin = _pin;
   init();
 }
-
-/* Public methods */
 
 /**
  * Read and return the current value
@@ -218,9 +210,6 @@ bool FigmaPot::changed() {
 char FigmaPot::key() {
   return positions_keys[current_position];
 }
-
-
-/* Private methods */
 
 /**
  * Update the values and status of the potentiometer
@@ -269,8 +258,6 @@ FigmaLightSensor::FigmaLightSensor(uint8_t _pin) {
   init();
   update();
 }
-
-/* Public methods */
 
 /**
  * Add a trigger to the light sensor
@@ -321,8 +308,6 @@ char FigmaLightSensor::key() {
   return current_key;
 }
 
-/* Private methods */
-
 /**
  * Initialise the light sensor by defining the pin
 */
@@ -336,16 +321,12 @@ void FigmaLightSensor::init() {
  * FigmaEncoder class
  */
 
-/* Constructor */
-
 FigmaEncoder::FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn) {
   pinA = _pinA;
   pinB = _pinB;
   clicks_per_turn = _clicks_per_turn;
   init();
 }
-
-/* Public methods */
 
 bool FigmaEncoder::clickRight() {
 
@@ -375,15 +356,10 @@ char FigmaEncoder::key() {
   return key_encoder;
 }
 
-
-/* Private methods */
-
 void FigmaEncoder::init() {
   pinMode(pinA, INPUT);
   pinMode(pinB, INPUT);
 }
-
-
 
 /**
  * FigmaSwitch class
@@ -402,8 +378,6 @@ FigmaSwitch::FigmaSwitch(uint8_t _pin, char _key0, char _key1) {
   changed_flag = false;
   init();
 }
-
-/* Public methods */
 
 /**
  * Get the current switch position
@@ -446,8 +420,6 @@ void FigmaSwitch::update() {
   }
   else changed_flag = false;
 }
-
-/* Private methods */
 
 /**
  * Read the current switch value
@@ -528,6 +500,7 @@ void FigmaLed::init() {
 void FigmaLed::update() {
   digitalWrite(pin, value);
 }
+
 
 
 /**

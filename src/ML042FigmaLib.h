@@ -216,7 +216,7 @@ class FigmaLed {
     public:
         FigmaLed(uint8_t _pin);  // constructor
 
-        void set(uint8_t _value);
+        void set(bool _value);
         void on();
         void off();
         void toggle();
