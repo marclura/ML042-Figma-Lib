@@ -9,7 +9,7 @@
   
   @section author Author
   
-  Written by Marco Lurati, November 18, 2023
+  Written by Marco Lurati, contact@marcolurati.ch
   
   @section license License
   

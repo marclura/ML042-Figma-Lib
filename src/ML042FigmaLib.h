@@ -2,7 +2,7 @@
   @file ML042FigmaLib.h
 
   ----------------------------------------------------------------------------------
-  Created by Marco Lurati, November 18, 2023
+  Written by Marco Lurati, contact@marcolurati.ch
   
   MIT License
 
