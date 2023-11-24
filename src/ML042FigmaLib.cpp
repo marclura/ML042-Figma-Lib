@@ -41,7 +41,7 @@
 #include "ML042FigmaLib.h"
 
 /**
- * FigmaButton constructor
+ * @brief constructor
  * 
  * @param _pin  The pin of the board used to connect the button
  * @param _key Key to send as HID for the button
@@ -57,7 +57,7 @@ FigmaButton::FigmaButton(uint8_t _pin, char _key) {
 }
 
 /**
-  * Check if the button is not pressed
+  * @brief Check if the button is not pressed
   * 
   * @return True if the button is not pressed
  */
@@ -68,7 +68,7 @@ bool FigmaButton::off() {
 }
 
 /**
- * Check if the button as been pressed, from not pressed to pressed (rising edge)
+ * @brief Check if the button as been pressed, from not pressed to pressed (rising edge)
  * 
  * @return True if the button as just been pressed
  */
@@ -79,7 +79,7 @@ bool FigmaButton::pressed() {
 }
 
 /**
- * Check if the button is still pressed
+ * @brief Check if the button is still pressed
  * 
  * @return True if the button is still pressed
  */
@@ -90,7 +90,7 @@ bool FigmaButton::on() {
 }
 
 /**
- * Check if the button as been released, from pressed to not pressed (falling edge)
+ * @brief Check if the button as been released, from pressed to not pressed (falling edge)
  * 
  * @return True if the button has been just released
  */
@@ -101,7 +101,7 @@ bool FigmaButton::released() {
 }
 
 /**
- * Get the button key
+ * @brief Get the button key
  * 
  * @return The key for the button
  */
@@ -110,7 +110,7 @@ char FigmaButton::key() {
 }
 
 /**
- * Update the status of the button
+ * @brief Update the status of the button
  * 
  * 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
  */
@@ -129,14 +129,14 @@ void FigmaButton::update() {
 }
 
 /**
- * Read the pin status
+ * @brief Read the pin status
  */
 void FigmaButton::read() {
   value = digitalRead(pin);
 }
 
 /**
- * Initialize the pin of the button
+ * @brief Initialize the pin of the button
  */
 void FigmaButton::init() {
   pinMode(pin, INPUT);
@@ -144,7 +144,7 @@ void FigmaButton::init() {
 
 
 /**
- * FigmaPot Constructor 1
+ * @brief constructor 1
  * 
  * @param _pin pin used to read the potentiometer
  * @param _positions amount of positions that will be mapped on the patentiometer
@@ -158,7 +158,7 @@ FigmaPot::FigmaPot(uint8_t _pin, uint8_t _positions, uint16_t _spread) {
 }
 
 /**
- * FigmaPot Constructor 2
+ * @brief constructor 2
  * 
  * Simple potentiometer definition without any extended functionalities
  * @param _pin pin used to read the potentiometer
@@ -169,7 +169,7 @@ FigmaPot::FigmaPot(uint8_t _pin) {
 }
 
 /**
- * Read and return the current value
+ * @brief Read and return the current value
  * 
  * @return current potentiometer value
 */
@@ -179,7 +179,7 @@ uint16_t FigmaPot::getValue() {
 }
 
 /**
- * Add a new position to the potentiometer
+ * @brief Add a new position to the potentiometer
  * 
  * @param _position position number, counted from left to right
  * @param _value potentimmeter value of the new position
@@ -192,7 +192,7 @@ void FigmaPot::addPosition(uint8_t _position, uint16_t _value, char _key) {
 }
 
 /**
- * Check if the position has changed or not
+ * @brief Check if the position has changed or not
  * 
  * @return True if the position has changed
  * 
@@ -203,7 +203,7 @@ bool FigmaPot::changed() {
 }
 
 /**
- * Return the corresponding key for that position
+ * @brief Return the corresponding key for that position
  * 
  * @return The key of the current position
 */
@@ -212,7 +212,7 @@ char FigmaPot::key() {
 }
 
 /**
- * Update the values and status of the potentiometer
+ * @brief Update the values and status of the potentiometer
 */
 void FigmaPot::update() {
   bool position_found = false;
@@ -231,14 +231,14 @@ void FigmaPot::update() {
 }
 
 /**
- * Read the current value of the potentiometer
+ * @brief Read the current value of the potentiometer
 */
 void FigmaPot::read() {
   value = analogRead(pin);
 }
 
 /**
- * Initialise the potentiometer pin
+ * @brief Initialise the potentiometer pin
 */
 void FigmaPot::init() {
   old_position = 255; // init old value out of the possible range
@@ -249,7 +249,7 @@ void FigmaPot::init() {
 
 
 /**
- * FigmaLightSensor Constructor
+ * @brief constructor
  * 
  * @param _pin pin used to read the light sensor
 */
@@ -260,7 +260,7 @@ FigmaLightSensor::FigmaLightSensor(uint8_t _pin) {
 }
 
 /**
- * Add a trigger to the light sensor
+ * @brief Add a trigger to the light sensor
  * 
  * @param _threshold threshold value used to determinate if the sensor is active or not
  * @param _spread hysteresis effect around the threshold value to avoid the fireing of the key pressed due to the fluctuating nature of the analog reading of the pins
@@ -277,7 +277,7 @@ void FigmaLightSensor::triggerThreshold(uint16_t _threshold, uint16_t _spread, c
 }
 
 /**
- * Update the current value of the light sensor
+ * @brief Update the current value of the light sensor
 */
 void FigmaLightSensor::update() {
   value = analogRead(pin);
@@ -286,7 +286,7 @@ void FigmaLightSensor::update() {
 }
 
 /**
- * Return true if the light intensity changed from the previous threshold side
+ * @brief Return true if the light intensity changed from the previous threshold side
  * 
  * @return True if the light intensity switched threshold side
 */
@@ -300,7 +300,7 @@ bool FigmaLightSensor::changed() {
 }
 
 /**
- * Return the corresponding key for that position
+ * @brief Return the corresponding key for that position
  * 
  * @return the key of the current position
 */
@@ -309,7 +309,7 @@ char FigmaLightSensor::key() {
 }
 
 /**
- * Initialise the light sensor by defining the pin
+ * @brief Initialise the light sensor by defining the pin
 */
 void FigmaLightSensor::init() {
   pinMode(pin, INPUT);
@@ -318,7 +318,7 @@ void FigmaLightSensor::init() {
 
 
 /*!
- * FigmaEncoder class
+ * @brief constructor
  */
 
 FigmaEncoder::FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn) {
@@ -362,7 +362,7 @@ void FigmaEncoder::init() {
 }
 
 /**
- * FigmaSwitch class
+ * @brief constructor
  * 
  * Used to manage a witch with two positions, like a rocket switch
  * 
@@ -380,7 +380,7 @@ FigmaSwitch::FigmaSwitch(uint8_t _pin, char _key0, char _key1) {
 }
 
 /**
- * Get the current switch position
+ * @brief Get the current switch position
  * 
  * It will be 1 or 0
  * @return current switch postion
@@ -390,7 +390,7 @@ bool FigmaSwitch::position() {
 }
 
 /**
- * Check if the switch position has changed
+ * @brief Check if the switch position has changed
  * 
  * @return True if the switch position has changed
 */
@@ -399,7 +399,7 @@ bool FigmaSwitch::changed() {
 }
 
 /**
- * Return the correct key according to the current position
+ * @brief Return the correct key according to the current position
  * 
  * @return key of the current position
 */
@@ -410,7 +410,7 @@ char FigmaSwitch::key() {
   return key;
 }
 /**
- * Update the switch status
+ * @brief Update the switch status
 */
 void FigmaSwitch::update() {
   read();
@@ -422,14 +422,14 @@ void FigmaSwitch::update() {
 }
 
 /**
- * Read the current switch value
+ * @brief Read the current switch value
 */
 void FigmaSwitch::read() {
   value = digitalRead(pin);
 }
 
 /**
- * Initialize the pin of the switch and set the initial values
+ * @brief Initialize the pin of the switch and set the initial values
 */
 void FigmaSwitch::init() {
   pinMode(pin, INPUT);
@@ -441,7 +441,7 @@ void FigmaSwitch::init() {
 
 
 /**
- * FigmaLed constructor
+ * @brief constructor
  * 
  * @param _pin connection pin to the LED
 */
@@ -452,7 +452,7 @@ FigmaLed::FigmaLed(uint8_t _pin) {
 }
 
 /**
- * Change the current LED value
+ * @brief Change the current LED value
  * 
  * @param _value 1 (on) or 0 (off)
 */
@@ -462,7 +462,7 @@ void FigmaLed::set(bool _value) {
 }
 
 /**
- * Switch on the LED
+ * @brief Switch on the LED
 */
 void FigmaLed::on() {
   value = true;
@@ -470,7 +470,7 @@ void FigmaLed::on() {
 }
 
 /**
- * Switch off the LED
+ * @brief Switch off the LED
 */
 void FigmaLed::off() {
   value = false;
@@ -478,7 +478,7 @@ void FigmaLed::off() {
 }
 
 /**
- * Invert the LED status
+ * @brief Invert the LED status
  * 
  * If on->off, if off->on
 */
@@ -488,14 +488,14 @@ void FigmaLed::toggle() {
 }
 
 /**
- * Set the LED pin
+ * @brief Set the LED pin
 */
 void FigmaLed::init() {
   pinMode(pin, OUTPUT);
 }
 
 /**
- * Update the pin status
+ * @brief Update the pin status
 */
 void FigmaLed::update() {
   digitalWrite(pin, value);
@@ -504,7 +504,7 @@ void FigmaLed::update() {
 
 
 /**
- * FigmaLedPWM constructor
+ * @brief constructor
  * 
  * @param _pin connection pin of the LED
  * @param _value initial PWM value of the pin (0-255)
@@ -519,7 +519,7 @@ FigmaLedPWM::FigmaLedPWM(uint8_t _pin, uint8_t _value, bool _on_at_startup) {
 }
 
 /**
- * Switch on the LED with the indicated PWM pin value
+ * @brief Switch on the LED with the indicated PWM pin value
  * 
  * @param _value PWM pin value (0-255)
 */
@@ -530,7 +530,7 @@ void FigmaLedPWM::on(uint8_t _value) {
 }
 
 /**
- * Switch on the LED to the previous on value
+ * @brief Switch on the LED to the previous on value
 */
 void FigmaLedPWM::on() {
   value = old_value;
@@ -538,7 +538,7 @@ void FigmaLedPWM::on() {
 }
 
 /**
- * Switch off the LED
+ * @brief Switch off the LED
 */
 void FigmaLedPWM::off() {
   old_value = value;
@@ -547,7 +547,7 @@ void FigmaLedPWM::off() {
 }
 
 /**
- * Set the LED pin
+ * @brief Set the LED pin
 */
 void FigmaLedPWM::init() {
   pinMode(pin, OUTPUT);
@@ -557,7 +557,7 @@ void FigmaLedPWM::init() {
 }
 
 /**
- * Update the pin status
+ * @brief Update the pin status
 */
 void FigmaLedPWM::update() {
   analogWrite(pin, value);

@@ -33,7 +33,7 @@
 
 #include <Arduino.h>
 
-/*!
+/*
  * FigmaButton class
  */
 class FigmaButton {
@@ -57,7 +57,7 @@ class FigmaButton {
         void init();
 };
 
-/*!
+/*
  * FigmaPot class
  */
 class FigmaPot {
@@ -87,7 +87,7 @@ class FigmaPot {
 };
 
 
-/*!
+/*
  * FigmaLightSensor
  */
 class FigmaLightSensor {
@@ -114,58 +114,51 @@ class FigmaLightSensor {
 };
 
 
-/*!
+/*
  * FigmaEncoder class
  */
 class FigmaEncoder {
     public:
         /*!
-        * FigmaEncoder Datatype declaration Class Constructor
-        * @class
+        * @brief FigmaEncoder Datatype declaration Class Constructor
+        *
         * @param {number} _pin - connection pin
         */
         FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn);  // constructor
     
 
-        /*!
+        /*
         * Return true if a click to the right occourred
-        * @method
         */
         bool clickRight();
 
-        /*!
+        /*
         * Return true if a click to the left occourred
-        * @method
         */
         bool clickLeft();
 
-        /*!
+        /*
         * Return the current angle
-        * @method
         */
         uint16_t angle();
 
-        /*!
+        /*
         * Return true if the angle has changed
-        * @method
         */
         bool angleChanged();
 
-        /*!
+        /*
         * Add a position with a key
-        * @method
         */
         void addPosition(uint16_t _angle, char _key);
 
-        /*!
+        /*
         * Return the current key
-        * @method
         */
         char key();
 
-        /*!
+        /*
         * Update the encoder values
-        * @method
         */
         void update();
 
@@ -177,15 +170,14 @@ class FigmaEncoder {
         uint16_t old_angle;
         char key_encoder;
 
-        /*!
+        /*
         * Initialise the encoder
-        * @method
         */
         void init();
 
 };
 
-/*!
+/*
  * FigmaSwitch class
  */
 class FigmaSwitch {
@@ -209,7 +201,7 @@ class FigmaSwitch {
         void init();
 };
 
-/*!
+/*
  * FigmaLed class
  */
 class FigmaLed {
@@ -228,7 +220,7 @@ class FigmaLed {
         void update();
 };
 
-/*!
+/*
  * FigmaLed class
  */
 class FigmaLedPWM {
