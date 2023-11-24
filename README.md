@@ -6,23 +6,25 @@ Library to control a Figma project using the ML042 board.
 
 ![ML042 pinout](https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042_20221031_back.png "ML042 pinout")
 
-- G2: D/A
-- G4: D/A
-- G5: D
-- G12: D/A
-- G13: D/A
-- G14: D/A
-- G15: D/A
-- G16: D
-- G17: D
-- G18: D
-- G19: D
-- G21: D/I2C(SDA)
-- G22: D/I2C(SCL)
-- G25: D/A
-- G26: D/A
-- G27: D/A
-- G32: D/A
-- G33: D/A
-- G34: D/A
-- G35: D/A
+| PIN | Analog | Other functions |
+| --- | ------ | --------------- |
+| G2  | yes    | -               |
+| G4  | yes    | -               |
+| G5  | no     | -               |
+| G12 | yes    | -               |
+| G13 | yes    | -               |
+| G14 | yes    | -               |
+| G15 | yes    | -               |
+| G16 | no    | -               |
+| G17 | no    | -               |
+| G18 | no    | -               |
+| G19 | no    | -               |
+| G21 | no    | I2C (SDA)       |
+| G22 | no    | I2C (SCL         |
+| G25 | yes    | -               |
+| G26 | yes    | -               |
+| G27 | yes    | -               |
+| G32 | yes    | -               |
+| G33 | yes    | -               |
+| G34 | yes    | -               |
+| G35 | yes    | -               |
