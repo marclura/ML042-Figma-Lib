@@ -41,6 +41,11 @@
 #include "ML042FigmaLib.h"
 
 /**
+ * @brief FigmaButton example
+ * @example ML042_Figma_Lib_button_demo/ML042_Figma_Lib_button_demo.ino
+*/
+
+/**
  * @brief constructor
  * 
  * @param _pin  The pin of the board used to connect the button
@@ -142,6 +147,11 @@ void FigmaButton::init() {
   pinMode(pin, INPUT);
 }
 
+
+/**
+ * @brief FigmaPot example
+ * @example ML042_Figma_Lib_potentiometer_demo/ML042_Figma_Lib_potentiometer_demo.ino
+*/
 
 /**
  * @brief constructor 1
