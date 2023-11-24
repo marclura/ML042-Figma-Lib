@@ -38,8 +38,9 @@
  */
 class FigmaButton {
     public:
-        FigmaButton(uint8_t _pin, char _key);    // constructor
-    
+        FigmaButton(uint8_t _pin, char _key);    // constructor 1
+        FigmaButton(uint8_t _pin);  // constructor 2
+
         bool off();
         bool pressed();
         bool on();

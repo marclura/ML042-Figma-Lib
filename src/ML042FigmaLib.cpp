@@ -46,7 +46,7 @@
 */
 
 /**
- * @brief constructor
+ * @brief constructor 1
  * 
  * @param _pin  The pin of the board used to connect the button
  * @param _key Key to send as HID for the button
@@ -55,6 +55,20 @@
 FigmaButton::FigmaButton(uint8_t _pin, char _key) {
   pin = _pin;
   key_item = _key;
+  value = false;
+  old_value = false;
+  status = 0; // 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
+  init();
+}
+
+/**
+ * @brief constructor 2
+ * 
+ * @param _pin  The pin of the board used to connect the button
+ */
+
+FigmaButton::FigmaButton(uint8_t _pin) {
+  pin = _pin;
   value = false;
   old_value = false;
   status = 0; // 0: off, 1: pressed (rising edge), 2: on, 3: released (falling edge)
