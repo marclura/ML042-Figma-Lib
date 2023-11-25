@@ -98,7 +98,9 @@ class FigmaLightSensor {
         void triggerThreshold(uint16_t _threshold, uint16_t _spread, char _keyAbove, char _keyBelow);
         void update();
         bool changed();
+        uint16_t getValue();
         char key();
+        
 
     protected:
         uint8_t pin;

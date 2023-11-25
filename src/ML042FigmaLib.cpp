@@ -324,6 +324,15 @@ bool FigmaLightSensor::changed() {
 }
 
 /**
+ * @brief Return the current light sensor value
+ * 
+ * @return The current sensor value
+*/
+uint16_t FigmaLightSensor::getValue() {
+  return value;
+}
+
+/**
  * @brief Return the corresponding key for that position
  * 
  * @return the key of the current position
