@@ -28,7 +28,7 @@
 
 */
 
-#include <ML042_Figma_Lib.h>
+#include <ML042FigmaLib.h>
 
 FigmaEncoder encoder(2, 15);  // pin A, pin B
 

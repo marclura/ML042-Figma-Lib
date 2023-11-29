@@ -28,7 +28,7 @@
 
 */
 
-#include <ML042_Figma_Lib.h>
+#include <ML042FigmaLib.h>
 
 FigmaLedPWM led(23, 128, true); // pin, initial value (0-255), on at startup
 
