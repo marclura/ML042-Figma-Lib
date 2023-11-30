@@ -35,7 +35,9 @@ Library to control a Figma project using the ML042 board.
 Considerations to evenly spread the position along the potentiometer range:
 
 DAC range: int dac = 4096
+
 Positions: int pos
+
 Position id: int id = 1-pos
 
 Formula: dac/pos * (1/2 + (id-1))
