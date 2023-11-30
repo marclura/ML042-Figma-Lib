@@ -28,7 +28,7 @@
 
 */
 
-#include <ML042_Figma_Lib.h>
+#include <ML042FigmaLib.h>
 
 FigmaPot pot_mapped(13, 4, 200);  // constructor 1, mapped potentiometer: pin, positions, spread
 FigmaPot pot_simple(2);  // constructor 2, simple pot without any key functions

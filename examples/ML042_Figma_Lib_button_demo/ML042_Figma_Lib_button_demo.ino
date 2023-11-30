@@ -28,7 +28,7 @@
 
 */
 
-#include <ML042_Figma_Lib.h>
+#include <ML042FigmaLib.h>
 
 FigmaButton button(2, 'b'); // pin, key
 
