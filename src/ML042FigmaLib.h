@@ -76,8 +76,8 @@ class FigmaPot {
         uint16_t value;
         uint16_t spread;
         uint8_t positions;
-        uint16_t positions_values[10];
-        char positions_keys[10];
+        uint16_t positions_values[20];
+        char positions_keys[20];
         uint8_t current_position;
         uint8_t old_position;
         bool position_changed;
