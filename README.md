@@ -28,3 +28,17 @@ Library to control a Figma project using the ML042 board.
 | G33 | yes    | -               |
 | G34 | yes    | -               |
 | G35 | yes    | -               |
+
+
+## Potentiometer addPosition() calculation
+
+Considerations to evenly spread the position along the potentiometer range:
+
+DAC range: int dac = 4096
+Positions: int pos
+Position id: int id = 1-pos
+
+Formula: dac/pos * (1/2 + (id-1))
+
+![ML042Figma potentiometer position values](https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042FIgmaLib_potentiometer_positions_calculator.png "ML042Figma potentiometer position values")
+
