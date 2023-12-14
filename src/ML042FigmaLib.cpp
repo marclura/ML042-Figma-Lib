@@ -351,49 +351,7 @@ void FigmaLightSensor::init() {
 
 
 
-/*!
- * @brief constructor
- */
 
-FigmaEncoder::FigmaEncoder(uint8_t _pinA, uint8_t _pinB, uint8_t _clicks_per_turn) {
-  pinA = _pinA;
-  pinB = _pinB;
-  clicks_per_turn = _clicks_per_turn;
-  init();
-}
-
-bool FigmaEncoder::clickRight() {
-
-}
-
-bool FigmaEncoder::clickLeft() {
-
-}
-
-void FigmaEncoder::update() {
-
-}
-
-uint16_t FigmaEncoder::angle() {
-  return angle_encoder;
-}
-
-bool FigmaEncoder::angleChanged() {
-
-}
-
-void FigmaEncoder::addPosition(uint16_t _angle, char _key) {
-  
-}
-
-char FigmaEncoder::key() {
-  return key_encoder;
-}
-
-void FigmaEncoder::init() {
-  pinMode(pinA, INPUT);
-  pinMode(pinB, INPUT);
-}
 
 /**
  * @brief constructor
