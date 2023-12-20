@@ -354,7 +354,7 @@ void FigmaLightSensor::init() {
 
 
 /**
- * @brief constructor
+ * @brief constructor 1
  * 
  * Used to manage a witch with two positions, like a rocket switch
  * 
@@ -367,6 +367,20 @@ FigmaSwitch::FigmaSwitch(uint8_t _pin, char _key0, char _key1) {
   pin = _pin;
   key0 = _key0;
   key1 = _key1;
+  changed_flag = false;
+  init();
+}
+
+/**
+ * @brief constructor 2
+ * 
+ * Used to manage a witch with two positions, like a rocket switch
+ * 
+ * @param _pin connection pin to the board
+ */
+
+FigmaSwitch::FigmaSwitch(uint8_t _pin) {
+  pin = _pin;
   changed_flag = false;
   init();
 }

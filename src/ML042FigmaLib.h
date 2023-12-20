@@ -121,7 +121,8 @@ class FigmaLightSensor {
  */
 class FigmaSwitch {
     public:
-        FigmaSwitch(uint8_t _pin, char _key0, char _key1);  // constructor
+        FigmaSwitch(uint8_t _pin, char _key0, char _key1);  // constructor 1
+        FigmaSwitch(uint8_t _pin);  // constructor 2
 
         bool position();
         bool changed();
