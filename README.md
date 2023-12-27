@@ -83,7 +83,7 @@ void loop() {
 
 ## FigmaPot
 
-```arduino
+```cpp
 // constructor 1, mapped potentiometer: pin, positions, spread
 FigmaPot pot_mapped(13, 4, 200); 
 
@@ -125,7 +125,7 @@ void loop() {
 
 ## FigmaLightSensor
 
-```arduino
+```cpp
 FigmaLightSensor sensor(13);
 
 byte old_key = ' ';
@@ -158,7 +158,7 @@ void loop() {
 
 ## FigmaSwitch
 
-```arduino
+```cpp
 // Important! Don't use "switch" as a variable name, because it is already reserved as switch() function
 
 FigmaSwitch rocket_switch(2, 'L', 'R');  // pin, key position 1, key position 2
@@ -187,7 +187,7 @@ void loop() {
 
 ## FigmaLed
 
-```arduino
+```cpp
 FigmaLed led(23);
 
 void setup() {
@@ -221,7 +221,7 @@ void loop() {
 
 ## FigmaLedPWM
 
-```arduino
+```cpp
 FigmaLedPWM led(23, 128, true); // pin, initial value (0-255), on at startup
 
 void setup() {
