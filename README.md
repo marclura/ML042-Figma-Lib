@@ -48,13 +48,13 @@ Formula: dac/pos * (1/2 + (id-1))
 ![ML042Figma potentiometer position values](https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042FIgmaLib_potentiometer_positions_calculator.png "ML042Figma potentiometer position values")
 
 ## Include Library
-```
+```arduino
 #include <ML042FigmaLib.h>
 ```
 
 ## FigmaButton
 
-```
+```arduino
 FigmaButton button(2, 'b'); // pin, key
 
 void setup() {
@@ -83,7 +83,7 @@ void loop() {
 
 ## FigmaPot
 
-```
+```arduino
 // constructor 1, mapped potentiometer: pin, positions, spread
 FigmaPot pot_mapped(13, 4, 200); 
 
@@ -125,7 +125,7 @@ void loop() {
 
 ## FigmaLightSensor
 
-```
+```arduino
 FigmaLightSensor sensor(13);
 
 byte old_key = ' ';
@@ -158,7 +158,7 @@ void loop() {
 
 ## FigmaSwitch
 
-```
+```arduino
 // Important! Don't use "switch" as a variable name, because it is already reserved as switch() function
 
 FigmaSwitch rocket_switch(2, 'L', 'R');  // pin, key position 1, key position 2
@@ -187,7 +187,7 @@ void loop() {
 
 ## FigmaLed
 
-```
+```arduino
 FigmaLed led(23);
 
 void setup() {
@@ -221,7 +221,7 @@ void loop() {
 
 ## FigmaLedPWM
 
-```
+```arduino
 FigmaLedPWM led(23, 128, true); // pin, initial value (0-255), on at startup
 
 void setup() {
