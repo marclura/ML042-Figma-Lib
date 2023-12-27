@@ -40,7 +40,6 @@ void setup() {
     sensor.triggerThreshold(512, 100, 'a', 'b');
 }
 
-
 void loop() {
 
     // read the sensor
@@ -56,7 +55,6 @@ void loop() {
             old_key = sensor.key();
         }
     }
-
 
     delay(100);
 }
