@@ -7,7 +7,7 @@ Library to control a Figma project using the ML042 board.
 
 ## ML042 pinout
 
-<img src="./doc/ML042_20221031_back.png" width=300px>
+<img src="./doc/ML042_20221031_back.png" width=450px>
 
 | PIN | Analog | Other functions |
 | --- | ------ | --------------- |
