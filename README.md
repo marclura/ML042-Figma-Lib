@@ -4,7 +4,6 @@ Library to control a Figma project using the ML042 board.
 
 <img src="./doc/ML042_20221031_back_render.png">
 
-
 ## ML042 pinout
 
 <img src="./doc/ML042_20221031_back.png" width=450px>
