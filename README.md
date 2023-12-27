@@ -2,12 +2,12 @@
 
 Library to control a Figma project using the ML042 board.
 
-![ML042](https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042_20221031_back_render.png "ML042 ")
+<img src="./doc/ML042_20221031_back_render.png">
 
 
 ## ML042 pinout
 
-![ML042 pinout](https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042_20221031_back.png "ML042 pinout")
+<img src="./doc/ML042_20221031_back.png" width=300px>
 
 | PIN | Analog | Other functions |
 | --- | ------ | --------------- |
