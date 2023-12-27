@@ -23,7 +23,7 @@ Library to control a Figma project using the ML042 board.
 | G18 | no    | -               |
 | G19 | no    | -               |
 | G21 | no    | I2C (SDA)       |
-| G22 | no    | I2C (SCL         |
+| G22 | no    | I2C (SCL)        |
 | G25 | yes    | -               |
 | G26 | yes    | -               |
 | G27 | yes    | -               |
