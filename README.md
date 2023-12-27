@@ -32,11 +32,6 @@ Library to control a Figma project using the ML042 board.
 | G34 | yes    | -               |
 | G35 | yes    | -               |
 
-
-## Potentiometer addPosition() calculation
-
-
-
 ## Include Library
 ```cpp
 #include <ML042FigmaLib.h>
