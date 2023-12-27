@@ -13,13 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@1.9.5
-        with:
-          doxyfile-path: "./Doxyfile"
-          working-directory: "."
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./doc
-          enable_jekyll: false
-          
