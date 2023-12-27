@@ -1,4 +1,4 @@
-name: Doxygen Action
+name: Github Doc Pages
 
 on:
   push:
@@ -13,7 +13,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Doxygen Action
         uses: mattnotmitt/doxygen-action@1.9.5
+        with:
+          doxyfile-path: 'doc/Doxygen'
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
