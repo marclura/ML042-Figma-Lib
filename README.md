@@ -48,13 +48,13 @@ Formula: dac/pos * (1/2 + (id-1))
 ![ML042Figma potentiometer position values](https://github.com/marclura/ML042_Figma_Lib/blob/main/doc/ML042FIgmaLib_potentiometer_positions_calculator.png "ML042Figma potentiometer position values")
 
 ## Include Library
-```arduino
+```cpp
 #include <ML042FigmaLib.h>
 ```
 
 ## FigmaButton
 
-```arduino
+```cpp
 FigmaButton button(2, 'b'); // pin, key
 
 void setup() {
