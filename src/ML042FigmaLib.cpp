@@ -521,13 +521,9 @@ void FigmaLed::update() {
 
 
 /**
- * @brief FigmaLedPWM example
- * @example ML042_Figma_Lib_LedPWM_demo/ML042_Figma_Lib_LedPWM_demo.ino
-*/
-
-/**
  * @brief constructor
  * 
+ * @example ML042_Figma_Lib_LedPWM_demo/ML042_Figma_Lib_LedPWM_demo.ino
  * @param _pin connection pin of the LED
  * @param _value initial PWM value of the pin (0-255)
  * @param _on_at_startup true will switch on the LED at startup, false won't
