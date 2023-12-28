@@ -38,8 +38,8 @@
 */
 
 
-#include <Arduino.h>
-#include "ML042FigmaLib.h"
+#include <Arduino.h>    ///< include arduino.h
+#include "ML042FigmaLib.h"  ///< include the library
 
 /*!
   FigmaButton example
