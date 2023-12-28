@@ -1,5 +1,8 @@
 # ML042 Figma Library
 
+[![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](https://github.com/peaceiris/actions-gh-pages/blob/main/LICENSE)
+
+
 Library to control a Figma project using the ML042 board.
 
 <img src="./doc/ML042_20221031_back_render.png">
