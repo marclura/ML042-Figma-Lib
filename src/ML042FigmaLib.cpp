@@ -42,7 +42,7 @@
 #include "ML042FigmaLib.h"
 
 /**
- * @brief FigmaButton example
+ * FigmaButton example
  * @example ML042_Figma_Lib_button_demo/ML042_Figma_Lib_button_demo.ino
 */
 
@@ -164,7 +164,7 @@ void FigmaButton::init() {
 
 
 /**
- * @brief FigmaPot example
+ * FigmaPot example
  * @example ML042_Figma_Lib_potentiometer_demo/ML042_Figma_Lib_potentiometer_demo.ino
 */
 
@@ -273,7 +273,7 @@ void FigmaPot::init() {
 
 
 /**
- * @brief FigmaLightSensor example
+ * FigmaLightSensor example
  * @example ML042_Figma_Lib_LightSensor_demo/ML042_Figma_Lib_LightSensor_demo.ino
 */
 
@@ -520,7 +520,7 @@ void FigmaLed::update() {
 
 
 /**
- * FigmaLedPWM
+ * FigmaLedPWM example
  * @example ML042_Figma_Lib_LedPWM_demo/ML042_Figma_Lib_LedPWM_demo.ino
 */
 

@@ -1,9 +1,14 @@
 /*!
   @file ML042FigmaLib.h
 
-  ----------------------------------------------------------------------------------
+  @mainpage ML042 Figma Library
+
+  @section author Author
+
   Written by Marco Lurati, contact@marcolurati.ch
   
+  @section license License
+
   MIT License
 
   Copyright (c) 2023 marclura
