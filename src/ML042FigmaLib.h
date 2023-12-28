@@ -36,7 +36,7 @@
 #ifndef ML042FigmaLib_h
 #define ML042FigmaLib_h
 
-#include <Arduino.h>    ///< include arduino.h
+#include <Arduino.h>
 
 /*
  * FigmaButton class
