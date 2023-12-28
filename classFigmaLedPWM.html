@@ -52,6 +52,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a99c28f37ce2081b9d36fc0ec1efdb05e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLedPWM.html#a99c28f37ce2081b9d36fc0ec1efdb05e">FigmaLedPWM</a> (uint8_t _pin, uint8_t _value, bool _on_at_startup)</td></tr>
 <tr class="memdesc:a99c28f37ce2081b9d36fc0ec1efdb05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="classFigmaLedPWM.html#a99c28f37ce2081b9d36fc0ec1efdb05e">More...</a><br /></td></tr>
 <tr class="separator:a99c28f37ce2081b9d36fc0ec1efdb05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d014d2b2f9a62b6e83033944e850aa3"><td class="memItemLeft" align="right" valign="top"><a id="a7d014d2b2f9a62b6e83033944e850aa3" name="a7d014d2b2f9a62b6e83033944e850aa3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>off</b> ()</td></tr>
+<tr class="memdesc:a7d014d2b2f9a62b6e83033944e850aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch off the LED. <br /></td></tr>
+<tr class="separator:a7d014d2b2f9a62b6e83033944e850aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0eb1ff9687192f5b13c13f02cd2381f9"><td class="memItemLeft" align="right" valign="top"><a id="a0eb1ff9687192f5b13c13f02cd2381f9" name="a0eb1ff9687192f5b13c13f02cd2381f9"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>on</b> ()</td></tr>
 <tr class="memdesc:a0eb1ff9687192f5b13c13f02cd2381f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch on the LED to the previous on value. <br /></td></tr>
@@ -59,10 +63,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>on</b> ()</td></tr>
 <tr class="memitem:afde1ee7c6c683be8570e7ebcafdae11f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLedPWM.html#afde1ee7c6c683be8570e7ebcafdae11f">on</a> (uint8_t _value)</td></tr>
 <tr class="memdesc:afde1ee7c6c683be8570e7ebcafdae11f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch on the LED with the indicated PWM pin value.  <a href="classFigmaLedPWM.html#afde1ee7c6c683be8570e7ebcafdae11f">More...</a><br /></td></tr>
 <tr class="separator:afde1ee7c6c683be8570e7ebcafdae11f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d014d2b2f9a62b6e83033944e850aa3"><td class="memItemLeft" align="right" valign="top"><a id="a7d014d2b2f9a62b6e83033944e850aa3" name="a7d014d2b2f9a62b6e83033944e850aa3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>off</b> ()</td></tr>
-<tr class="memdesc:a7d014d2b2f9a62b6e83033944e850aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch off the LED. <br /></td></tr>
-<tr class="separator:a7d014d2b2f9a62b6e83033944e850aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -77,18 +77,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8a26f4ff5027e2b2c52ebbe1be338e5a"><td class="memItemLeft" align="right" valign="top"><a id="a8a26f4ff5027e2b2c52ebbe1be338e5a" name="a8a26f4ff5027e2b2c52ebbe1be338e5a"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pin</b></td></tr>
-<tr class="separator:a8a26f4ff5027e2b2c52ebbe1be338e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f9ba2aa24d8d5bf7782263467607856"><td class="memItemLeft" align="right" valign="top"><a id="a1f9ba2aa24d8d5bf7782263467607856" name="a1f9ba2aa24d8d5bf7782263467607856"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
-<tr class="separator:a1f9ba2aa24d8d5bf7782263467607856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa5a271fbcc1a92a7b13826efcfc49ac"><td class="memItemLeft" align="right" valign="top"><a id="aaa5a271fbcc1a92a7b13826efcfc49ac" name="aaa5a271fbcc1a92a7b13826efcfc49ac"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>old_value</b></td></tr>
 <tr class="separator:aaa5a271fbcc1a92a7b13826efcfc49ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4393cb1725b72d6692fbc2a9f25380b"><td class="memItemLeft" align="right" valign="top"><a id="ae4393cb1725b72d6692fbc2a9f25380b" name="ae4393cb1725b72d6692fbc2a9f25380b"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>on_at_startup</b></td></tr>
 <tr class="separator:ae4393cb1725b72d6692fbc2a9f25380b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a26f4ff5027e2b2c52ebbe1be338e5a"><td class="memItemLeft" align="right" valign="top"><a id="a8a26f4ff5027e2b2c52ebbe1be338e5a" name="a8a26f4ff5027e2b2c52ebbe1be338e5a"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pin</b></td></tr>
+<tr class="separator:a8a26f4ff5027e2b2c52ebbe1be338e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f9ba2aa24d8d5bf7782263467607856"><td class="memItemLeft" align="right" valign="top"><a id="a1f9ba2aa24d8d5bf7782263467607856" name="a1f9ba2aa24d8d5bf7782263467607856"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="separator:a1f9ba2aa24d8d5bf7782263467607856"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a99c28f37ce2081b9d36fc0ec1efdb05e" name="a99c28f37ce2081b9d36fc0ec1efdb05e"></a>

@@ -52,13 +52,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adb4f985972d6fc923f55c0255d129b06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLightSensor.html#adb4f985972d6fc923f55c0255d129b06">FigmaLightSensor</a> (uint8_t _pin)</td></tr>
 <tr class="memdesc:adb4f985972d6fc923f55c0255d129b06"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="classFigmaLightSensor.html#adb4f985972d6fc923f55c0255d129b06">More...</a><br /></td></tr>
 <tr class="separator:adb4f985972d6fc923f55c0255d129b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a2cfb378c02b7a354e99596c179b66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLightSensor.html#a45a2cfb378c02b7a354e99596c179b66">triggerThreshold</a> (uint16_t _threshold, uint16_t _spread, char _keyAbove, char _keyBelow)</td></tr>
-<tr class="memdesc:a45a2cfb378c02b7a354e99596c179b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a trigger to the light sensor.  <a href="classFigmaLightSensor.html#a45a2cfb378c02b7a354e99596c179b66">More...</a><br /></td></tr>
-<tr class="separator:a45a2cfb378c02b7a354e99596c179b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac77784d91b70ddb268a8a77ec7a2fc96"><td class="memItemLeft" align="right" valign="top"><a id="ac77784d91b70ddb268a8a77ec7a2fc96" name="ac77784d91b70ddb268a8a77ec7a2fc96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
-<tr class="memdesc:ac77784d91b70ddb268a8a77ec7a2fc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the current value of the light sensor. <br /></td></tr>
-<tr class="separator:ac77784d91b70ddb268a8a77ec7a2fc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad523bd3049c7dc32ca07a05ce95de876"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLightSensor.html#ad523bd3049c7dc32ca07a05ce95de876">changed</a> ()</td></tr>
 <tr class="memdesc:ad523bd3049c7dc32ca07a05ce95de876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if the light intensity changed from the previous threshold side.  <a href="classFigmaLightSensor.html#ad523bd3049c7dc32ca07a05ce95de876">More...</a><br /></td></tr>
 <tr class="separator:ad523bd3049c7dc32ca07a05ce95de876"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -68,6 +61,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></t
 <tr class="memitem:a2077cb3b0377fc940443bd6ccb622532"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLightSensor.html#a2077cb3b0377fc940443bd6ccb622532">key</a> ()</td></tr>
 <tr class="memdesc:a2077cb3b0377fc940443bd6ccb622532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the corresponding key for that position.  <a href="classFigmaLightSensor.html#a2077cb3b0377fc940443bd6ccb622532">More...</a><br /></td></tr>
 <tr class="separator:a2077cb3b0377fc940443bd6ccb622532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45a2cfb378c02b7a354e99596c179b66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFigmaLightSensor.html#a45a2cfb378c02b7a354e99596c179b66">triggerThreshold</a> (uint16_t _threshold, uint16_t _spread, char _keyAbove, char _keyBelow)</td></tr>
+<tr class="memdesc:a45a2cfb378c02b7a354e99596c179b66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a trigger to the light sensor.  <a href="classFigmaLightSensor.html#a45a2cfb378c02b7a354e99596c179b66">More...</a><br /></td></tr>
+<tr class="separator:a45a2cfb378c02b7a354e99596c179b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac77784d91b70ddb268a8a77ec7a2fc96"><td class="memItemLeft" align="right" valign="top"><a id="ac77784d91b70ddb268a8a77ec7a2fc96" name="ac77784d91b70ddb268a8a77ec7a2fc96"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memdesc:ac77784d91b70ddb268a8a77ec7a2fc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the current value of the light sensor. <br /></td></tr>
+<tr class="separator:ac77784d91b70ddb268a8a77ec7a2fc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -78,30 +78,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a8e294b581254f09cbe78cec34eaf90ee"><td class="memItemLeft" align="right" valign="top"><a id="a8e294b581254f09cbe78cec34eaf90ee" name="a8e294b581254f09cbe78cec34eaf90ee"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pin</b></td></tr>
-<tr class="separator:a8e294b581254f09cbe78cec34eaf90ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae08e01ec91c7432cf3820200fb08a572"><td class="memItemLeft" align="right" valign="top"><a id="ae08e01ec91c7432cf3820200fb08a572" name="ae08e01ec91c7432cf3820200fb08a572"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
-<tr class="separator:ae08e01ec91c7432cf3820200fb08a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2080d19cd4b6b194b164590f3a2e615"><td class="memItemLeft" align="right" valign="top"><a id="ae2080d19cd4b6b194b164590f3a2e615" name="ae2080d19cd4b6b194b164590f3a2e615"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>spread</b></td></tr>
-<tr class="separator:ae2080d19cd4b6b194b164590f3a2e615"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ae0d8aa58f88698879ccaca3c933d83"><td class="memItemLeft" align="right" valign="top"><a id="a8ae0d8aa58f88698879ccaca3c933d83" name="a8ae0d8aa58f88698879ccaca3c933d83"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>threshold</b></td></tr>
-<tr class="separator:a8ae0d8aa58f88698879ccaca3c933d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec64fdeca028bfbc655210fcd724c6f9"><td class="memItemLeft" align="right" valign="top"><a id="aec64fdeca028bfbc655210fcd724c6f9" name="aec64fdeca028bfbc655210fcd724c6f9"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>current_key</b></td></tr>
+<tr class="separator:aec64fdeca028bfbc655210fcd724c6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a886baf9fc9be4999b077e500296d1f14"><td class="memItemLeft" align="right" valign="top"><a id="a886baf9fc9be4999b077e500296d1f14" name="a886baf9fc9be4999b077e500296d1f14"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>keyAbove</b></td></tr>
 <tr class="separator:a886baf9fc9be4999b077e500296d1f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae81686b1148412bee5167e87cb988708"><td class="memItemLeft" align="right" valign="top"><a id="ae81686b1148412bee5167e87cb988708" name="ae81686b1148412bee5167e87cb988708"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>keyBelow</b></td></tr>
 <tr class="separator:ae81686b1148412bee5167e87cb988708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec64fdeca028bfbc655210fcd724c6f9"><td class="memItemLeft" align="right" valign="top"><a id="aec64fdeca028bfbc655210fcd724c6f9" name="aec64fdeca028bfbc655210fcd724c6f9"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>current_key</b></td></tr>
-<tr class="separator:aec64fdeca028bfbc655210fcd724c6f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1d24e2f48a892933c6a87417847e375"><td class="memItemLeft" align="right" valign="top"><a id="aa1d24e2f48a892933c6a87417847e375" name="aa1d24e2f48a892933c6a87417847e375"></a>
 char&#160;</td><td class="memItemRight" valign="bottom"><b>old_key</b></td></tr>
 <tr class="separator:aa1d24e2f48a892933c6a87417847e375"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e294b581254f09cbe78cec34eaf90ee"><td class="memItemLeft" align="right" valign="top"><a id="a8e294b581254f09cbe78cec34eaf90ee" name="a8e294b581254f09cbe78cec34eaf90ee"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pin</b></td></tr>
+<tr class="separator:a8e294b581254f09cbe78cec34eaf90ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2080d19cd4b6b194b164590f3a2e615"><td class="memItemLeft" align="right" valign="top"><a id="ae2080d19cd4b6b194b164590f3a2e615" name="ae2080d19cd4b6b194b164590f3a2e615"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>spread</b></td></tr>
+<tr class="separator:ae2080d19cd4b6b194b164590f3a2e615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae0d8aa58f88698879ccaca3c933d83"><td class="memItemLeft" align="right" valign="top"><a id="a8ae0d8aa58f88698879ccaca3c933d83" name="a8ae0d8aa58f88698879ccaca3c933d83"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>threshold</b></td></tr>
+<tr class="separator:a8ae0d8aa58f88698879ccaca3c933d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08e01ec91c7432cf3820200fb08a572"><td class="memItemLeft" align="right" valign="top"><a id="ae08e01ec91c7432cf3820200fb08a572" name="ae08e01ec91c7432cf3820200fb08a572"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="separator:ae08e01ec91c7432cf3820200fb08a572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="adb4f985972d6fc923f55c0255d129b06" name="adb4f985972d6fc923f55c0255d129b06"></a>
