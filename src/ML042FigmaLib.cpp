@@ -356,7 +356,7 @@ void FigmaLightSensor::init() {
 
 
 /**
- * @brief FigmaSwitch example
+ * FigmaSwitch example
  * @example ML042_Figma_Lib_Switch_demo/ML042_Figma_Lib_Switch_demo.ino
 */
 
@@ -453,7 +453,7 @@ void FigmaSwitch::init() {
 
 
 /**
- * @brief FigmaLed example
+ * FigmaLed example
  * @example ML042_Figma_Lib_Led_demo/ML042_Figma_Lib_Led_demo.ino
 */
 
@@ -519,11 +519,15 @@ void FigmaLed::update() {
 }
 
 
+/**
+ * FigmaLedPWM
+ * @example ML042_Figma_Lib_LedPWM_demo/ML042_Figma_Lib_LedPWM_demo.ino
+*/
+
 
 /**
  * @brief constructor
  * 
- * @example ML042_Figma_Lib_LedPWM_demo/ML042_Figma_Lib_LedPWM_demo.ino
  * @param _pin connection pin of the LED
  * @param _value initial PWM value of the pin (0-255)
  * @param _on_at_startup true will switch on the LED at startup, false won't
