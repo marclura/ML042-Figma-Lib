@@ -1,5 +1,6 @@
 var classFigmaLedPWM =
 [
+    [ "FigmaLedPWM", "classFigmaLedPWM.html#a99c28f37ce2081b9d36fc0ec1efdb05e", null ],
     [ "init", "classFigmaLedPWM.html#aaf430c9edd507f83b095be90a6cbf3e8", null ],
     [ "off", "classFigmaLedPWM.html#a7d014d2b2f9a62b6e83033944e850aa3", null ],
     [ "on", "classFigmaLedPWM.html#a0eb1ff9687192f5b13c13f02cd2381f9", null ],
