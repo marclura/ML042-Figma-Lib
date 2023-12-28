@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -37,11 +41,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('ML042FigmaLib_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">ML042FigmaLib.h</div></div>
 </div><!--header-->
@@ -239,10 +255,10 @@ $(function() {
 <div class="ttc" id="aclassFigmaButton_html_aa03ea7f35e3ed01b226b19c1c1791f84"><div class="ttname"><a href="classFigmaButton.html#aa03ea7f35e3ed01b226b19c1c1791f84">FigmaButton::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Initialize the pin of the button.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:161</div></div>
 <div class="ttc" id="aclassFigmaButton_html_af2a86e1ab70974760100f6e1a6dabf0e"><div class="ttname"><a href="classFigmaButton.html#af2a86e1ab70974760100f6e1a6dabf0e">FigmaButton::off</a></div><div class="ttdeci">bool off()</div><div class="ttdoc">Check if the button is not pressed.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:84</div></div>
 <div class="ttc" id="aclassFigmaLedPWM_html"><div class="ttname"><a href="classFigmaLedPWM.html">FigmaLedPWM</a></div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.h:166</div></div>
-<div class="ttc" id="aclassFigmaLedPWM_html_a0eb1ff9687192f5b13c13f02cd2381f9"><div class="ttname"><a href="classFigmaLedPWM.html#a0eb1ff9687192f5b13c13f02cd2381f9">FigmaLedPWM::on</a></div><div class="ttdeci">void on()</div><div class="ttdoc">Switch on the LED to the previous on value.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:557</div></div>
-<div class="ttc" id="aclassFigmaLedPWM_html_a62009da5aea17cddd7173213c0303f3a"><div class="ttname"><a href="classFigmaLedPWM.html#a62009da5aea17cddd7173213c0303f3a">FigmaLedPWM::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update the pin status.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:584</div></div>
-<div class="ttc" id="aclassFigmaLedPWM_html_a7d014d2b2f9a62b6e83033944e850aa3"><div class="ttname"><a href="classFigmaLedPWM.html#a7d014d2b2f9a62b6e83033944e850aa3">FigmaLedPWM::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Switch off the LED.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:565</div></div>
-<div class="ttc" id="aclassFigmaLedPWM_html_aaf430c9edd507f83b095be90a6cbf3e8"><div class="ttname"><a href="classFigmaLedPWM.html#aaf430c9edd507f83b095be90a6cbf3e8">FigmaLedPWM::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Set the LED pin.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:574</div></div>
+<div class="ttc" id="aclassFigmaLedPWM_html_a0eb1ff9687192f5b13c13f02cd2381f9"><div class="ttname"><a href="classFigmaLedPWM.html#a0eb1ff9687192f5b13c13f02cd2381f9">FigmaLedPWM::on</a></div><div class="ttdeci">void on()</div><div class="ttdoc">Switch on the LED to the previous on value.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:553</div></div>
+<div class="ttc" id="aclassFigmaLedPWM_html_a62009da5aea17cddd7173213c0303f3a"><div class="ttname"><a href="classFigmaLedPWM.html#a62009da5aea17cddd7173213c0303f3a">FigmaLedPWM::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Update the pin status.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:580</div></div>
+<div class="ttc" id="aclassFigmaLedPWM_html_a7d014d2b2f9a62b6e83033944e850aa3"><div class="ttname"><a href="classFigmaLedPWM.html#a7d014d2b2f9a62b6e83033944e850aa3">FigmaLedPWM::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Switch off the LED.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:561</div></div>
+<div class="ttc" id="aclassFigmaLedPWM_html_aaf430c9edd507f83b095be90a6cbf3e8"><div class="ttname"><a href="classFigmaLedPWM.html#aaf430c9edd507f83b095be90a6cbf3e8">FigmaLedPWM::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Set the LED pin.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:570</div></div>
 <div class="ttc" id="aclassFigmaLed_html"><div class="ttname"><a href="classFigmaLed.html">FigmaLed</a></div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.h:147</div></div>
 <div class="ttc" id="aclassFigmaLed_html_a0872ae1bc35aba4b64e5fbd3928b69af"><div class="ttname"><a href="classFigmaLed.html#a0872ae1bc35aba4b64e5fbd3928b69af">FigmaLed::toggle</a></div><div class="ttdeci">void toggle()</div><div class="ttdoc">Invert the LED status.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:502</div></div>
 <div class="ttc" id="aclassFigmaLed_html_a09fe7db343551b9c12efe1bac6130e9e"><div class="ttname"><a href="classFigmaLed.html#a09fe7db343551b9c12efe1bac6130e9e">FigmaLed::off</a></div><div class="ttdeci">void off()</div><div class="ttdoc">Switch off the LED.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:492</div></div>
@@ -273,9 +289,13 @@ $(function() {
 <div class="ttc" id="aclassFigmaSwitch_html_addba886347080799ca55e061e781c3bb"><div class="ttname"><a href="classFigmaSwitch.html#addba886347080799ca55e061e781c3bb">FigmaSwitch::position</a></div><div class="ttdeci">bool position()</div><div class="ttdoc">Get the current switch position.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:401</div></div>
 <div class="ttc" id="aclassFigmaSwitch_html_afce7dd84f3e1058184a6fbe66f9dafcc"><div class="ttname"><a href="classFigmaSwitch.html#afce7dd84f3e1058184a6fbe66f9dafcc">FigmaSwitch::key</a></div><div class="ttdeci">char key()</div><div class="ttdoc">Return the correct key according to the current position.</div><div class="ttdef"><b>Definition:</b> ML042FigmaLib.cpp:419</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="ML042FigmaLib_8h.html">ML042FigmaLib.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
 </body>
 </html>
