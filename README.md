@@ -1,6 +1,7 @@
 # ML042 Figma Library
 
 [![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](https://github.com/peaceiris/actions-gh-pages/blob/main/LICENSE)
+[![doxygen](https://img.shields.io/badge/doxygen%20documentation-view-blue)](https://marclura.github.io/ML042_Figma_Lib)
 
 
 Library to control a Figma project using the ML042 board.
@@ -33,6 +34,10 @@ Library to control a Figma project using the ML042 board.
 | G33 | yes    | -               |
 | G34 | yes    | -               |
 | G35 | yes    | -               |
+
+## Library documentation
+
+Visit the complete [library documentation](https://marclura.github.io/ML042_Figma_Lib) generated with doxygen.
 
 ## Include Library
 ```cpp
