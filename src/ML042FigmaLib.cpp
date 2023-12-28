@@ -41,17 +41,17 @@
 #include <Arduino.h>
 #include "ML042FigmaLib.h"
 
-/**
- * FigmaButton example
- * @example ML042_Figma_Lib_button_demo/ML042_Figma_Lib_button_demo.ino
+/*!
+  FigmaButton example
+  @example ML042_Figma_Lib_button_demo/ML042_Figma_Lib_button_demo.ino
 */
 
-/**
- * @brief constructor 1
- * 
- * @param _pin  The pin of the board used to connect the button
- * @param _key Key to send as HID for the button
- */
+/*!
+  @brief constructor 1
+ 
+  @param _pin  The pin of the board used to connect the button
+  @param _key Key to send as HID for the button
+*/
 
 FigmaButton::FigmaButton(uint8_t _pin, char _key) {
   pin = _pin;
@@ -62,11 +62,11 @@ FigmaButton::FigmaButton(uint8_t _pin, char _key) {
   init();
 }
 
-/**
- * @brief constructor 2
- * 
- * @param _pin  The pin of the board used to connect the button
- */
+/*!
+  @brief constructor 2
+
+  @param _pin  The pin of the board used to connect the button
+*/
 
 FigmaButton::FigmaButton(uint8_t _pin) {
   pin = _pin;
