@@ -7,6 +7,8 @@
   
   Library to use the PCB board ML042 as an HID interface (bluetooth or USB) to control a Figma project with key strokes
   
+  [Github repository]: https://github.com/marclura/ML042_Figma_Lib
+
   @section author Author
   
   Written by Marco Lurati, contact@marcolurati.ch
