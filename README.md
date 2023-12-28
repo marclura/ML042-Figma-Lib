@@ -1,6 +1,7 @@
 # ML042 Figma Library
 
 [![license](https://img.shields.io/github/license/peaceiris/actions-gh-pages.svg)](https://github.com/peaceiris/actions-gh-pages/blob/main/LICENSE)
+[![documentation](https://img.shields.io/github/documentation/peaceiris/actions-gh-pages.svg)](https://marclura.github.io/ML042_Figma_Lib/html/)
 
 
 Library to control a Figma project using the ML042 board.
