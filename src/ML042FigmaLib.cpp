@@ -272,6 +272,10 @@ void FigmaPot::init() {
 
 
 
+/**
+ * @brief FigmaLightSensor example
+ * @example ML042_Figma_Lib_LightSensor_demo/ML042_Figma_Lib_LightSensor_demo.ino
+*/
 
 /**
  * @brief constructor
@@ -351,7 +355,10 @@ void FigmaLightSensor::init() {
 
 
 
-
+/**
+ * @brief FigmaSwitch example
+ * @example ML042_Figma_Lib_Switch_demo/ML042_Figma_Lib_Switch_demo.ino
+*/
 
 /**
  * @brief constructor 1
@@ -445,6 +452,10 @@ void FigmaSwitch::init() {
 
 
 
+/**
+ * @brief FigmaLed example
+ * @example ML042_Figma_Lib_Led_demo/ML042_Figma_Lib_Led_demo.ino
+*/
 
 /**
  * @brief constructor
@@ -508,6 +519,11 @@ void FigmaLed::update() {
 }
 
 
+
+/**
+ * @brief FigmaLedPWM example
+ * @example ML042_Figma_Lib_LedPWM_demo/ML042_Figma_Lib_LedPWM_demo.ino
+*/
 
 /**
  * @brief constructor
