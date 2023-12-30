@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "ML045 Figma Lib", "index.html", [
+  [ "ML042 Figma Lib", "index.html", [
     [ "ML042 Figma Library", "index.html", [
       [ "Introduction", "index.html#intro_sec", null ],
       [ "Author", "index.html#author", null ],
