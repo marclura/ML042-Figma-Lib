@@ -37,7 +37,7 @@ Library to control a Figma project using the ML042 board.
 
 ## Library documentation
 
-Visit the complete [library documentation](https://marclura.github.io/ML042_Figma_Lib) generated with doxygen.
+Visit the complete [library documentation](https://marclura.github.io/ML042-Figma-Lib) generated with doxygen.
 
 ## Include Library
 ```cpp
